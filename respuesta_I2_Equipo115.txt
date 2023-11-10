@@ -7,4 +7,8 @@ Apellido: Sueldo
 -------------------------------------------------------
 A) Para actualizar mi repositorio, al estado que esté el repositorio que hice FORK, debo agregar la referencia al repositorio remoto original, al cual llamaremos «upstream», lo hacemos con el comando: git remote add upstream +  web URL del repo original, luego traemos todas las ramas con: git fetch upstream, seleccionamos la rama que queremos actualizar, por ejemplo el main: git checkout main y reescribir nuestra rama main con los commits nuevos de la rama main del repositorio original con: git rebase upstream/main. Por ultimo actualizamos nuestro fork remoto, ejecutando git push -f origin master.
 
-B)Sí, ALFA puede actualizar su fork al estado del fork de GAMMA, siempre y cuando BETA (el propietario del repositorio original) permita que los forks de ALFA y GAMMA estén sincronizados. Sin embargo, si BETA realiza cambios en el repositorio original después de que ALFA haya actualizado su fork con GAMMA, ALFA deberá repetir el proceso para mantenerse sincronizado.
+B) Sí, ALFA puede actualizar su fork al estado del fork de GAMMA, siempre y cuando BETA (el propietario del repositorio original) permita que los forks de ALFA y GAMMA estén sincronizados. Sin embargo, si BETA realiza cambios en el repositorio original después de que ALFA haya actualizado su fork con GAMMA, ALFA deberá repetir el proceso para mantenerse sincronizado.
+
+C) Sí, GAMMA puede actualizar su FORK al estado actual del fork de ALFA. Similar a la situación de ALFA, GAMMA debe descargar los cambios del repositorio de ALFA, fusionarlos localmente y luego cargar esos cambios a su FORK.
+
+D) No, tus datos locales no se perderán al actualizar el fork. La idea es que puedas integrar los cambios del repositorio original sin perder tus propias modificaciones. Sin embargo, puede haber conflictos que necesitarás resolver durante el proceso de fusión.
