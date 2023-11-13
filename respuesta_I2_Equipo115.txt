@@ -12,3 +12,74 @@ B) Sí, ALFA puede actualizar su fork al estado del fork de GAMMA, siempre y cua
 C) Sí, GAMMA puede actualizar su FORK al estado actual del fork de ALFA. Similar a la situación de ALFA, GAMMA debe descargar los cambios del repositorio de ALFA, fusionarlos localmente y luego cargar esos cambios a su FORK.
 
 D) No, tus datos locales no se perderán al actualizar el fork. La idea es que puedas integrar los cambios del repositorio original sin perder tus propias modificaciones. Sin embargo, puede haber conflictos que necesitarás resolver durante el proceso de fusión.
+
+
+E)
+Valentino Arias (BETA) 
+git clone https://github.com/44arias/TP_SO_i2_Equipo
+( agrego archivo fork.txt)
+git add .
+git commit -m "Añadiendo fork.txt
+git push
+
+Agustin Di Leone (GAMMA)
+realiza un fork del repositorio de BETA
+git clone https://github.com/AgustinDiLeone/TP_SO_i2_Equipo
+git add . 
+git commit -m "Archivo modificado fork.txt" 
+git push
+
+Yamila Sueldo (ALFA)
+realiza un fork del repositoriode BETA
+git clone https://github.com/yamilasueldo/TP_SO_i2_Equipo
+git add .
+git commit -m "modificado archivo fork.txt"
+git push
+
+Valentino Arias (BETA) 
+(agrego archivo "NuevoDato.txt")
+git add . 
+git commit -m "Add files via upload"
+git push
+git add .
+git commit -m "Añadiendo “respuesta_I2_EquipoX”"
+git push
+
+Agustin Di Leone (GAMMA) y Yamila Sueldo (ALFA)
+Actualizacion de repositorio.
+git remote add upstream https://github.com/44arias/TP_SO_i2_Equipo
+git remote -v
+git fetch upstream
+git merge upstream/main
+git push origin main
+
+Valentino Arias (BETA) 
+(agrego archivo "respuesta_I2_Equipo103.txt")
+git add .
+git commit -m "Añadiendo “respuesta_I2_EquipoX”"
+git push
+
+Agustin Di Leone (GAMMA)
+actualizo su repositorio y agrego las respuestas a y BETA
+git fetch upstream
+git merge upstream/main
+git push origin main
+git add .
+git commit -m "Añadiendo “respuesta_I2_EquipoX”"
+git push
+
+
+Valentino Arias (BETA) 
+Agrego respuestas c y d 
+git add .
+git commit -m "Añadiendo "Agregué las respuestas c y d"
+git push
+
+Yamila Sueldo(ALFA)
+Actualizo su repositorio y agrego respuesta e 
+git fetch upstream
+git merge upstream/main
+git push origin main
+git add .
+git commit -m "Añadiendo "Agregando respuesta e"
+git push
